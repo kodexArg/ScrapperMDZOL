@@ -22,8 +22,7 @@ class MdzolSpider(scrapy.Spider):
         nlink = response.xpath(NEWS_LINK).getall()
         ntext = response.xpath(NEWS_TEXT).getall()
 
-        filters = getattr(self, 'filters', None)
-        filters = filters.split(',')
+        filters = getattr(self, 'filters', None).split(',')
 
         for k, text in enumerate(ntext):
             discard = False
