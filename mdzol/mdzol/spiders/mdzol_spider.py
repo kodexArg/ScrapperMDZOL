@@ -39,6 +39,10 @@ class MdzolSpider(scrapy.Spider):
                         "text": text,
                         "link": nlink[k]
                     }
-
+    
         yield nnews
+    
+
+    def parse_link(self, response, **kwargs):
+        pass
 
